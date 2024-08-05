@@ -16,7 +16,7 @@
             padding: 0;
         }
         header {
-            padding: 12px 0; /* Añadi más padding arriba y abajo del header */
+            padding: 12px 0; /* Añadí más padding arriba y abajo del header */
             text-align: center; /* Centra el contenido del header */
         }
         .Titulo {
@@ -114,7 +114,7 @@
         }
         .sticker {
             position: absolute;
-            width: 500px; 
+            width: 500px; /* Tamaño proporcional al ancho de la pantalla */
             height: auto;
         }
         /* Sticker */
@@ -217,7 +217,6 @@
         max-width: 200px; 
     }
 }
-
     </style>
 </head>
 <body>
@@ -274,7 +273,9 @@
                 <em class="info"><br>Olvidate de las harinas <br> y los conservadores.<br><br></em>
                 <em class="info">Cuida de ellos con una alimentacion<br>deliciosa y de calidad.</em>
                 <em class="info"><br>¡Nos dan lo mejor, merecen lo mejor!<br><br></em>
-                <figure class="conteiner"><img src="imagenes/woof.png"></figure>
+                <div class="woof-image-container">
+                    <figure class="conteiner"><img src="imagenes/woof.png" class="woof-image"></figure>
+                </div>
                 <h3 class="info">Horario de apertura y cierre<br>Lunes a Domingo <br><br>9:00am a 8:00pm
                     Telefono <br>(33) 1261 8282</h3>
                 <p class="info">Estamos ubicados en:</p>  
@@ -335,6 +336,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
