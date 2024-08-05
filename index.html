@@ -16,7 +16,7 @@
             padding: 0;
         }
         header {
-            padding: 12px 0; /* Añadi más padding arriba y abajo del header */
+            padding: 12px 0; /* Añadí más padding arriba y abajo del header */
             text-align: center; /* Centra el contenido del header */
         }
         .Titulo {
@@ -114,7 +114,8 @@
         }
         .sticker {
             position: absolute;
-            width: 500px; 
+            width: 10vw; /* Tamaño proporcional al ancho de la pantalla */
+            max-width: 150px; /* Tamaño máximo para stickers */
             height: auto;
         }
         /* Sticker */
@@ -127,6 +128,17 @@
         /* Contacto */
         #sticker5 { bottom: 10px; left: 0px; display: none; } 
         #sticker6 { top: 50%; right: 0px; transform: translateY(-50%); display: none; }
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .sticker {
+                width: 20vw; /* Tamaño proporcional en pantallas medianas */
+            }
+        }
+        @media (max-width: 480px) {
+            .sticker {
+                width: 30vw; /* Tamaño proporcional en pantallas pequeñas */
+            }
+        }
     </style>
 </head>
 <body>
@@ -244,6 +256,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
