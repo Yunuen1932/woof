@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@600&family=Dancing+Script:wght@400..700&family=Eczar:wght@400..800&family=Gupter:wght@400;500;700&family=Kalnia+Glaze:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NL:wght@100..400&family=Ruda:wght@400..900&family=Space+Grotesk:wght@300..700&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>WOOF</title>
     <style>
         body {
             display: flex;
             flex-direction: column;
-            background-image: url(imagenes/Huellitas.jpeg);
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -20,7 +16,7 @@
             padding: 0;
         }
         header {
-            padding: 12px 0; /* Añadi mas padding arriba y abajo del header */
+            padding: 12px 0; /* Añadi más padding arriba y abajo del header */
             text-align: center; /* Centra el contenido del header */
         }
         .Titulo {
@@ -35,7 +31,7 @@
             font-family: "Playfair Display", serif;
             font-weight: 400;
             color: rgb(79, 50, 24);
-            background-color: rgb(255, 213, 166);
+            background-color: rgb(255, 231, 206);
             text-align: center;
             padding: 8px;
             font-size: 2em; /* Ajuste el tamaño de los subtítulos */
@@ -64,7 +60,7 @@
             justify-content: center;
             gap: 10px; /* Ajuste el espacio entre enlaces */
             padding: 10px 0; 
-            background-color: rgb(212, 141, 115);
+            background-color: rgb(209, 168, 153);
         }
         nav a {
             text-decoration: none;
@@ -79,8 +75,8 @@
             padding: 0;
             overflow: hidden;
         }
-        .menu li{
-            float:left;
+        .menu li {
+            float: left;
         }
         .menu li a {
             display: block;
@@ -95,74 +91,62 @@
             padding: 20px 0; /* Aumente el padding vertical para la sección */
             text-align: center; 
             margin: 0;
-
         }
         .center img {
             max-width: 100%; 
-            height: auto; /* Mantiene la proporción de la imagen */
+            height: auto; 
             border-radius: 4px;
             text-align: center; 
         }
         footer {
-            background-color: rgb(212, 141, 115);
+            background-color: rgb(209, 168, 153);
             padding: 10px 0;
             text-align: center;
         }
-        @media (min-width: 600px) {
-            nav a {
-                font-size: 1.2em; 
-            }
+        .sticker-container {
+            position: absolute; 
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Permite que los stickers no interfieran con otros eventos */
+            top: 0;
+            left: 0;
+            z-index: 10; /* Asegure que los stickers estén sobre el contenido */
         }
-        @media (max-width: 599px) {
-            .Titulo {
-                font-size: 1.5em; /* Reduzce el tamaño del título en pantallas más pequeñas */
-            }
-            .subtitulos {
-                font-size: 1.2em; 
-            }
-            .info {
-                font-size: 1.2em; /* Ajuste el tamaño de la información en pantallas más pequeñas */
-            }
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav a {
-                padding: 3px;
-                font-size: 0.9em; /* Ajuste el tamaño de los enlaces de navegación en pantallas más pequeñas */
-            }
+        .sticker {
+            position: absolute;
+            width: 500px; 
+            height: auto;
         }
+        /* Sticker */
+        /* Inicio */
+        #sticker2 { top: 0%; left: 0px; display: none; } 
+        #sticker3 { top: 17.8%; right: 0px; display: none; } 
+        /* Productos */
+        #sticker4 { top: 6%; right: 0px; display: none; } 
+        #sticker7 { bottom: 10px; left: 10px; display: none; } 
+        /* Contacto */
+        #sticker5 { bottom: 10px; left: 0px; display: none; } 
+        #sticker6 { top: 50%; right: 0px; transform: translateY(-50%); display: none; }
     </style>
 </head>
 <body>
     <header>
-     <nav>
-        <ul class="menu">
-          <li><a href="#" onclick="showSection('Inicio')">Inicio</a></li>
-          <li><a href="#" onclick="showSection('Productos')">Productos</a></li>
-          <li><a href="#" onclick="showSection('Contacto')">Contacto</a></li>
-        </ul>
-     </nav>
-    <div class="Titulo"><em>WOOF</em></div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#" onclick="showSection('Inicio')">Inicio</a></li>
+                <li><a href="#" onclick="showSection('Productos')">Productos</a></li>
+                <li><a href="#" onclick="showSection('Contacto')">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="Titulo"><em>WOOF</em></div>
     </header>
     <main>
         <div class="seccion">
             <section id="Inicio" class="content-section">
-                <h1 class="subtitulos">Tu Mejor amigo se merece lo mejor!<br>La salud de tu mascota si importa!</h1>
-                <figure class="center">
-                    <img src="imagenes/woof.jpg" alt="Descripción de la imagen">
-                </figure>
-                <h1 class="subtitulos">SABIAS QUE?</h1>
-                <div class="conteiner"><h2 class="info"> A primera vista no necesitamos ser científicos para saber que algo con menos 
-                    pesticidas y que no está genéticamente alterado es más sano. De acuerdo con un estudio de la 
-                    Universidad de Newcastle sobre vegetales orgánicos, se puede confirmar que estos sí tienen un impacto 
-                    positivo en la salud pues tienen niveles más altos de antioxidantes y niveles más bajos de pesticidas. Los antioxidantes ayudan a reducir el riesgo de enfermedades como el cáncer. 
-                    Son producidos de manera natural por las plantas para protegerse de pestes y enfermedades, sin embargo, cuando les ponen pesticidas, 
-                    las plantas ya no necesitan generarlos para defenderse. Así que sí vale la pena pensar en comprar nuestros productos orgánicos para tu perro. 
-                    En primera porque ya se ha comprobado que sí hay beneficios a la salud y en segunda porque es un método que cuida del ambiente, de los recursos
-                    y que promueve un trato decente y digno para los animales. Si bien aún no es una tendencia generalizada en la comida de perros pues no está regulado como tal 
-                    por los gobiernos, aquí puedes encontrar algunos premios orgánicos, comida orgánica y ayudar a que una parte de la dieta de tu perro sea más sana.
-                </h2>
+                <h1 class="subtitulos">Alimentos organicos,<br>
+                sin pesticidas, ni quimicos</h1>
+                <div class="conteiner">
+                    <h2 class="subtitulos">¡Elige lo mejor para ellos!</h2>
                 </div>
                 <div class="center">
                     <video width="400" height="600" controls>
@@ -170,46 +154,59 @@
                         Tu navegador no soporta la etiqueta de video.
                     </video>
                 </div>
+                <h1 class="subtitulos">La mejor opcion para su salud<br>y tu cartera $</h1>
             </section>
-            </div>
+        </div>
         <section id="Productos" class="content-section" style="display: none;">
-                <div class="conteiner">
-                    <h1 class="subtitulos">Zanahoria</h1>
-                   <figure class="center"> <img src="imagenes/zanahoriawoof.jpeg"></figure>
-                    <p class="info">1Kg <br>$50.oo c/u</p>
-                    <h3 class="info"><em>Un kilo de carne con zanahoria y calabaza.<br>Rico en Omega.</em></h3><br>
-                    <h1 class="subtitulos">Betabel</h1>
-                    <figure class="center"><img src="imagenes/betabelwoof.jpeg"></figure>
-                    <p class="info">1Kg <br> $55 c/u</p>
-                    <h3 class="info"><em>Un kilo de carne con betabel y calabaza<br>Rico en calcio.</em></h3><br>
-                    <h1 class="subtitulos">Carne</h1>
-                    <figure class="center"><img src="imagenes/carnewoof.jpeg"></figure>
-                    <p class="info">1Kg <br> $60 c/u</p>
-                    <h3 class="info"><em>Un Kilo de carne/Pata de pollo y vísceras de pollo <br> Rico en Proteína.</em></h3><br>
-                    <h1 class="subtitulos">Patitas de pollo y Medallones</h1>
-                    <figure class="center"><img src="imagenes/patitaswoof.jpg"></figure>
-                    <p class="info">1Kg <br> $50 c/u</p>
-                    <h3 class="info"><em>20 patitas de pollo sin uñas. Perfectas para premiarlos! <br> Un Kilo en medallones. Para aquellos que son todos unos bebes!</em></h3><br>
-                </div> 
+            <div class="conteiner">
+                <h1 class="subtitulos">Zanahoria</h1>
+                <figure class="center"> <img src="imagenes/zanahoriawoof.jpeg"></figure>
+                <p class="info">1Kg <br>$50.oo c/u</p>
+                <h3 class="info"><em>Un kilo de carne con zanahoria y calabaza.<br>Rico en Omega.</em></h3><br>
+                <h1 class="subtitulos">Betabel</h1>
+                <figure class="center"><img src="imagenes/betabelwoof.jpeg"></figure>
+                <p class="info">1Kg <br> $55 c/u</p>
+                <h3 class="info"><em>Un kilo de carne con betabel y calabaza<br>Rico en calcio.</em></h3><br>
+                <h1 class="subtitulos">Carne</h1>
+                <figure class="center"><img src="imagenes/carnewoof.jpeg"></figure>
+                <p class="info">1Kg <br> $60 c/u</p>
+                <h3 class="info"><em>Un Kilo de carne/Pata de pollo y vísceras de pollo <br> Rico en Proteína.</em></h3><br>
+                <h1 class="subtitulos">Patitas de pollo y Medallones</h1>
+                <figure class="center"><img src="imagenes/patitaswoof.jpg"></figure>
+                <p class="info">1Kg <br> $50 c/u</p>
+                <h3 class="info"><em>20 patitas de pollo sin uñas. Perfectas para premiarlos! <br> Un Kilo en medallones. Para aquellos que son todos unos bebes!</em></h3><br>
+            </div> 
         </section>
         <section id="Contacto" class="content-section" style="display: none;">
-                <div class="conteiner">
-                    <h1 class="center"><em class="subtitulos">Contactanos!</em></h1>
-                    <em class="info">Demuestrale a tu animalito que lo amas<br> con una excelente alimentacion.</em>
-                    <em class="info">Ellos nos dan lo mejor, asi que se merecen lo mejor!</em>
-                    <figure class="center"><img src="imagenes/perrosygatos.jpg"></figure>
-                    <h3 class="info">Horario de apertura y cierre<br>Lunes a Domingo <br><br>9:00am a 8:00pm
-                        Telefono <br>(33) 1261 8282</h3>
-                    <p class="info">Estamos ubicados en:</p>  
-                    <a href="https://maps.app.goo.gl/KenJH6JTRgpnrTJLA?g_st=iw" target="_blank">📍 Jorullo 1218,Indepencia,<br>44379 Guajalajara, jal.</a>
-                </div>
-
-
+            <div class="conteiner">
+                <h1 class="center"><em class="subtitulos">¡Contactanos!</em></h1>
+                <em class="info"><br>Olvidate de las harinas <br> y los conservadores.<br><br></em>
+                <em class="info">Cuida de ellos con una alimentacion<br>deliciosa y de calidad.</em>
+                <em class="info"><br>¡Nos dan lo mejor, merecen lo mejor!<br><br></em>
+                <figure class="conteiner"><img src="imagenes/woof.png"></figure>
+                <h3 class="info">Horario de apertura y cierre<br>Lunes a Domingo <br><br>9:00am a 8:00pm
+                    Telefono <br>(33) 1261 8282</h3>
+                <p class="info">Estamos ubicados en:</p>  
+                <a href="https://maps.app.goo.gl/KenJH6JTRgpnrTJLA?g_st=iw" target="_blank">📍 Jorullo 1218,Indepencia,<br>44379 Guajalajara, jal.</a>
+            </div>
         </section>
     </main>
     <footer>
         <p>© 2024 WOOF</p>
     </footer>
+
+    <div class="sticker-container">
+        <!-- Añade tus stickers aquí con la clase 'sticker' y un ID único para cada uno -->
+        <!-- Solo en Inicio -->
+        <img src="imagenes/dobby.png" class="sticker" id="sticker2" alt="Sticker 2"> <!-- Centro izquierdo en Inicio -->
+        <img src="imagenes/carnes.png" class="sticker" id="sticker3" alt="Sticker 3"> <!-- Centro derecho en Inicio -->
+        <!-- Solo en Productos -->
+        <img src="imagenes/patascarne.png" class="sticker" id="sticker4" alt="Sticker 4"> <!-- Inferior derecho en Productos -->
+        <img src="imagenes/ameli.png" class="sticker" id="sticker7" alt="Sticker 7"> <!-- Inferior izquierdo en Productos -->
+        <!-- Solo en Contacto -->
+        <img src="imagenes/pug.png" class="sticker" id="sticker5" alt="Sticker 5"> <!-- Inferior izquierdo en Contacto -->
+        <img src="imagenes/golden.png" class="sticker" id="sticker6" alt="Sticker 6"> <!-- Derecho medio en Contacto -->
+    </div>
 
     <script>
         function showSection(sectionId) {
@@ -218,7 +215,38 @@
                 section.style.display = 'none';
             });
             document.getElementById(sectionId).style.display = 'block';
+
+            // Mostrar/ocultar stickers según la sección activa
+            document.querySelectorAll('.sticker').forEach(sticker => {
+                sticker.style.display = 'none';
+            });
+
+            switch(sectionId) {
+                case 'Inicio':
+                    document.getElementById('sticker2').style.display = 'block';
+                    document.getElementById('sticker3').style.display = 'block';
+                    break;
+                case 'Productos':
+                    document.getElementById('sticker4').style.display = 'block';
+                    document.getElementById('sticker7').style.display = 'block';
+                    break;
+                case 'Contacto':
+                    document.getElementById('sticker5').style.display = 'block';
+                    document.getElementById('sticker6').style.display = 'block';
+                    break;
+            }
         }
+
+        // Inicializa la sección actual al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('Inicio'); // Mostrar la sección 'Inicio' por defecto
+        });
     </script>
 </body>
 </html>
+
+
+
+
+
+
