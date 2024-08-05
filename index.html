@@ -127,6 +127,12 @@
         /* Contacto */
         #sticker5 { bottom: 10px; left: 0px; display: none; } 
         #sticker6 { top: 50%; right: 0px; transform: translateY(-50%); display: none; }
+
+        img.woof-image {
+            max-width: 100%; /* Ajusta la imagen al ancho máximo disponible sin sobrepasar el contenedor */
+            height: auto; /* Mantiene la proporción original de la imagen */
+            border-radius: 4px; /* Si deseas un borde redondeado */
+}
     
 
      @media (max-width: 768px) {
@@ -158,6 +164,15 @@
         top: 50%;
         right: 0px;
         transform: translateY(-50%);
+    }
+    .woof-image-container {
+        padding: 10px; 
+        text-align: center; 
+    }
+
+    .woof-image {
+        width: 80vw; 
+        max-width: 300px; 
     }
 }
 
@@ -191,6 +206,15 @@
         top: 42%;
         right: 0px;
         transform: translateY(-50%);
+    }
+    .woof-image-container {
+        padding: 5px; 
+        text-align: center;  
+    }
+
+    .woof-image {
+        width: 90vw; 
+        max-width: 200px; 
     }
 }
     </style>
@@ -249,7 +273,9 @@
                 <em class="info"><br>Olvidate de las harinas <br> y los conservadores.<br><br></em>
                 <em class="info">Cuida de ellos con una alimentacion<br>deliciosa y de calidad.</em>
                 <em class="info"><br>¡Nos dan lo mejor, merecen lo mejor!<br><br></em>
-                <figure class="conteiner"><img src="imagenes/woof.png"></figure>
+                <div class="woof-image-container">
+                    <figure class="conteiner"><img src="imagenes/woof.png" class="woof-image"></figure>
+                </div>
                 <h3 class="info">Horario de apertura y cierre<br>Lunes a Domingo <br><br>9:00am a 8:00pm
                     Telefono <br>(33) 1261 8282</h3>
                 <p class="info">Estamos ubicados en:</p>  
